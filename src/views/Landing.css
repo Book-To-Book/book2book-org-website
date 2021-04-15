@@ -1,5 +1,5 @@
 .App {
-  background-color: rgba(var(--color-primary-rgb), .9);
+  background-color: rgba(var(--color-primary-rgb), 1);
   text-align: center;
   width: 100vw;
   height: 100vh;
@@ -50,7 +50,7 @@ nav.top-navbar ul>li>a:hover {
 }
 
 .App-header {
-  max-width: 1024px;
+  max-width: 1440px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -105,8 +105,11 @@ h1, h2, h3, h4, h5, p, small {
   color: var(--color-primary-contrast);
 }
 
-small {
-  font-size: 1rem;
+#email {
+  display: block;
+  margin-top: 2rem;
+  color: var(--color-light);
+  font-size: 1.5rem;
 }
 
 .slide-in {

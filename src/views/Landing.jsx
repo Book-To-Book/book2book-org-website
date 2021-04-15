@@ -1,4 +1,5 @@
 import doubleMockup from '../assets/img/mockups/double-mockup.png';
+import iphonesMockup from '../assets/img/mockups/Iphone_mockup_scaled.png';
 import whiteMockup from '../assets/img/mockups/homepage-mockup-white-phone.png';
 
 import './Landing.css';
@@ -22,19 +23,21 @@ const Landing = () => (
 
     <header className="App-header">
 
-      <div className="col-5">
-        <img src={doubleMockup} alt="Book2Book" style={{ width: '100%' }} />
+      <div className="col-6">
+        <img src={iphonesMockup} alt="Book2Book" style={{ width: '100%' }} />
       </div>
 
-      <div className="col-7 hidden-overflow centered-flex">
+      <div className="col-6 hidden-overflow centered-flex">
         <div className="slide-in hidden-overflow slider-inverse">
           <h2 className="superbold">Book2Book</h2>
           <h5 style={{ textTransform: 'uppercase' }}>
             La prima <b>biblioteca di prossimità</b> in Italia
           </h5>
           <small>
-            <i>Stay tuned!</i>
+            Stay tuned!
           </small>
+          <br/>
+          <a id="email" href="mailto:info@book2book.org">info@book2book.org</a>
         </div>
       </div>
 
