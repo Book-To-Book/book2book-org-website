@@ -39,8 +39,8 @@ const Landing = () => (
           </small>
           <br/>
           <a className="email" href="mailto:info@book2book.org">
-          <img src={emailIcon} alt="BandiPubblici"/> info@book2book.org
-        </a>
+            <img src={emailIcon} alt="BandiPubblici"/> info@book2book.org
+          </a>
         </div>
       </div>
 
