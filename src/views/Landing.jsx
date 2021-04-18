@@ -1,6 +1,4 @@
-import doubleMockup from '../assets/img/mockups/double-mockup.png';
 import iphonesMockup from '../assets/img/mockups/Iphone_mockup_scaled.png';
-import whiteMockup from '../assets/img/mockups/homepage-mockup-white-phone.png';
 import emailIcon from '../assets/img/icon_email_white.png';
 
 import './Landing.css';
