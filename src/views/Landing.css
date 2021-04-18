@@ -1,11 +1,12 @@
 .App {
   background-color: rgba(var(--color-primary-rgb), 1);
   text-align: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 nav.top-navbar {
@@ -54,8 +55,8 @@ nav.top-navbar ul>li>a:hover {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: 10vw;
+  margin-left: 10vw;
   font-size: calc(10px + 2vmin);
 }
 
@@ -79,6 +80,11 @@ nav.top-navbar ul>li>a:hover {
 
 .hidden-overflow {
   overflow-x: hidden;
+}
+
+.overflow-margin {
+  margin-left: -15%;
+  margin-right: -15%;
 }
 
 .centered-flex {
@@ -105,11 +111,24 @@ h1, h2, h3, h4, h5, p, small {
   color: var(--color-primary-contrast);
 }
 
-#email {
-  display: block;
+h4, h5, small {
+  letter-spacing: .1rem;
+}
+
+.email {
+  cursor: pointer;
+  display: inline-block;
   margin-top: 2rem;
+  font-size: 1rem;
   color: var(--color-light);
-  font-size: 1.5rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.email img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1rem;
+  margin-right: .1rem;
 }
 
 .slide-in {
