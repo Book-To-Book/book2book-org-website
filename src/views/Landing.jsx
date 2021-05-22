@@ -1,29 +1,17 @@
 import iphonesMockup from '../assets/img/mockups/Iphone_mockup_scaled.png';
 import emailIcon from '../assets/img/icon_email_white.png';
+import getItLogo from '../assets/img/logo_getit.png';
+import getItLogoNeg from '../assets/img/logo_getit_negative.png';
 
 import './Landing.css';
 
 const Landing = () => (
   <div className="App">
 
-    {/* <nav className="top-navbar">
-      <div>
-        <img id="nav-logo" src={whiteIcon} alt="BandiPubblici" />
-        <ul>
-          <li>
-            <a href="https://contrattipubblici.org">ContrattiPubblici.org</a>
-          </li>
-          <li>
-            <a href="https://synapta.it">Synapta</a>
-          </li>
-        </ul>
-      </div>
-    </nav> */}
-
     <header className="App-header">
 
       <div className="col-6 centered-flex">
-        <img src={iphonesMockup} alt="Book2Book" style={{ width: '100%' }} />
+        <img src={iphonesMockup} alt="Book2Book" title="Book2Book mockup" style={{ width: '100%' }} />
       </div>
 
       <div className="col-6 centered-flex">
@@ -37,12 +25,14 @@ const Landing = () => (
           </small>
           <br/>
           <a className="email" href="mailto:info@book2book.org">
-            <img src={emailIcon} alt="BandiPubblici"/> info@book2book.org
+            <img src={emailIcon} alt="Book2Book" title="Book2Book email"/> info@book2book.org
           </a>
+
+          <div className="logo-getit">
+            <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
+          </div>
         </div>
       </div>
-
-
 
     </header>
 
@@ -60,11 +50,15 @@ const Landing = () => (
           </small>
         </div>
 
-        <div className="slide-in hidden-overflow slider-inverse">
-          <img src={iphonesMockup} alt="BandiPubblici" style={{ maxWidth: '90%' }} />
+        <div className="slide slide-in hidden-overflow slider-inverse">
+          <img src={iphonesMockup} alt="Book2Book" title="Book2Book mockup" style={{ maxWidth: '90%' }} />
           <a className="email" href="mailto:info@book2book.org">
-            <img src={emailIcon} alt="BandiPubblici"/> info@book2book.org
+            <img src={emailIcon} alt="Book2Book" title="Book2Book email" /> info@book2book.org
           </a>
+
+          <div className="logo-getit">
+            <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
+          </div>
         </div>
       </div>
 

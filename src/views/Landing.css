@@ -83,8 +83,8 @@ nav.top-navbar ul>li>a:hover {
 }
 
 .overflow-margin {
-  margin-left: -15%;
-  margin-right: -15%;
+  margin-left: -10%;
+  margin-right: -10%;
 }
 
 .centered-flex {
@@ -96,11 +96,13 @@ nav.top-navbar ul>li>a:hover {
 .slider {
   transform: translateX(100%);
   -webkit-transform: translateX(100%);
+  position: relative;
 }
 
 .slider-inverse {
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
+  position: relative;
 }
 
 .App-link {
@@ -129,6 +131,16 @@ h4, h5, small {
   vertical-align: middle;
   height: 1rem;
   margin-right: .1rem;
+}
+
+.logo-getit {
+  margin-top: 3rem;
+  height: 2.5rem;
+  width: 100%;
+}
+.logo-getit img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .slide-in {
