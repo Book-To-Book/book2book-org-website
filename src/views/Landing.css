@@ -133,12 +133,25 @@ h4, h5, small {
   margin-right: .1rem;
 }
 
-.logo-getit {
-  margin-top: 3rem;
+#sponsors {
+  width: 90%;
+  margin: 4rem auto 0;
+}
+
+#logo-getit {
   height: 2.5rem;
   width: 100%;
 }
-.logo-getit img {
+#logo-getit img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#logo-sanpaolo {
+  height: 4rem;
+  width: 100%;
+}
+#logo-sanpaolo img {
   max-height: 100%;
   max-width: 100%;
 }
@@ -175,5 +188,9 @@ h4, h5, small {
 
   .App-header-mobile {
     display: block;
+  }
+
+  #sponsors {
+    margin: 1.5rem auto 0;
   }
 }

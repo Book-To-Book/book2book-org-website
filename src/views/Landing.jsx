@@ -2,6 +2,7 @@ import iphonesMockup from '../assets/img/mockups/Iphone_mockup_scaled.png';
 import emailIcon from '../assets/img/icon_email_white.png';
 import getItLogo from '../assets/img/logo_getit.png';
 import getItLogoNeg from '../assets/img/logo_getit_negative.png';
+import sanPaoloLogo from '../assets/img/logo_sanpaolo.png';
 
 import './Landing.css';
 
@@ -28,8 +29,13 @@ const Landing = () => (
             <img src={emailIcon} alt="Book2Book" title="Book2Book email"/> info@book2book.org
           </a>
 
-          <div className="logo-getit">
-            <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
+          <div id="sponsors" className="centered-flex">
+            <div id="logo-getit">
+              <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
+            </div>
+            <div id="logo-sanpaolo">
+              <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo"/>
+            </div>
           </div>
         </div>
       </div>
@@ -56,8 +62,13 @@ const Landing = () => (
             <img src={emailIcon} alt="Book2Book" title="Book2Book email" /> info@book2book.org
           </a>
 
-          <div className="logo-getit">
-            <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
+          <div id="sponsors" className="centered-flex">
+            <div id="logo-getit">
+              <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
+            </div>
+            <div id="logo-sanpaolo">
+              <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo"/>
+            </div>
           </div>
         </div>
       </div>
