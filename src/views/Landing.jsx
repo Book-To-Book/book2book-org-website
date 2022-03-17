@@ -18,23 +18,23 @@ const Landing = () => (
       <div className="col-6 centered-flex">
         <div className="slide-in slider">
           <h2 className="superbold">Book2Book</h2>
-          <h4 className="overflow-margin" style={{ textTransform: 'uppercase'}}>
+          <h4 className="overflow-margin" style={{ textTransform: 'uppercase' }}>
             La prima biblioteca di prossimità in Italia
           </h4>
           <small>
             Stay tuned!
           </small>
-          <br/>
+          <br />
           <a className="email" href="mailto:info@book2book.org">
-            <img src={emailIcon} alt="Book2Book" title="Book2Book email"/> info@book2book.org
+            <img src={emailIcon} alt="Book2Book" title="Book2Book email" /> info@book2book.org
           </a>
 
           <div id="sponsors" className="centered-flex">
-            <div id="logo-getit">
-              <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
-            </div>
             <div id="logo-sanpaolo">
-              <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo"/>
+              <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo" />
+            </div>
+            <div id="logo-getit">
+              <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt" />
             </div>
           </div>
         </div>
@@ -63,11 +63,11 @@ const Landing = () => (
           </a>
 
           <div id="sponsors" className="centered-flex">
-            <div id="logo-getit">
-              <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt"/>
-            </div>
             <div id="logo-sanpaolo">
-              <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo"/>
+              <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo" />
+            </div>
+            <div id="logo-getit">
+              <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt" />
             </div>
           </div>
         </div>
