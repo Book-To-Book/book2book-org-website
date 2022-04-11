@@ -31,9 +31,11 @@ const Landing = () => (
 
           <div id="sponsors" className="centered-flex">
             <div id="logo-sanpaolo">
+              <p>Con il sostegno di:</p>
               <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo" />
             </div>
             <div id="logo-getit">
+              <p>Vincitore di:</p>
               <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt" />
             </div>
           </div>
@@ -56,7 +58,7 @@ const Landing = () => (
           </small>
         </div>
 
-        <div className="slide slide-in hidden-overflow slider-inverse">
+        <div className="slide slide-in slider-inverse">
           <img src={iphonesMockup} alt="Book2Book" title="Book2Book mockup" style={{ maxWidth: '90%' }} />
           <a className="email" href="mailto:info@book2book.org">
             <img src={emailIcon} alt="Book2Book" title="Book2Book email" /> info@book2book.org
@@ -64,9 +66,11 @@ const Landing = () => (
 
           <div id="sponsors" className="centered-flex">
             <div id="logo-sanpaolo">
+              <p>Con il sostegno di:</p>
               <img src={sanPaoloLogo} alt="Fondazione Compagnia di San Paolo" title="Logo Fondazione Compagnia di San Paolo" />
             </div>
-            <div id="logo-getit">
+            <div id="logo-getit" style={{ marginTop: 30 }}>
+              <p>Vincitore di:</p>
               <img src={getItLogoNeg} alt="GetIt, percorsi di valore" title="Logo GetIt" />
             </div>
           </div>

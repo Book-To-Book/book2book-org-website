@@ -136,6 +136,11 @@ h4, h5, small {
 #sponsors {
   width: 90%;
   margin: 4rem auto 0;
+  align-items: flex-start;
+}
+
+#sponsors  p {
+  color: #fff;
 }
 
 #logo-getit {
