@@ -1,0 +1,9 @@
+{
+  "short_name": "Book2Book",
+  "name": "Book2Book",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#003d7a"
+}
