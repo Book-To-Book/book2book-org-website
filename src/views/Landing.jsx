@@ -1,6 +1,6 @@
 import iphonesMockup from '../assets/img/mockups/Iphone_mockup_scaled.png';
 import emailIcon from '../assets/img/icon_email_white.png';
-import getItLogo from '../assets/img/logo_getit.png';
+//import getItLogo from '../assets/img/logo_getit.png';
 import getItLogoNeg from '../assets/img/logo_getit_negative.png';
 import sanPaoloLogo from '../assets/img/logo_sanpaolo.png';
 
