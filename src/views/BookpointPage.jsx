@@ -1,13 +1,29 @@
 import Page from "../components/Page";
 import map from "../assets/img/map.png";
 import arrowIcon from "../assets/icons/arrow.png";
-import { BOOKPOINTS } from "../config";
+import { useState } from "react";
+import useGoogleSheets from "../hooks/useGoogleSheets";
+
+const LAT = [45.035532, 45.108615]
+const LON = [7.588573, 7.750035]
 
 const BookpointPage = () => {
+  const [selected, setSelected] = useState()
+
+  const { bookpoints } = useGoogleSheets();
+
   return (
     <Page bgColor>
       <div className="flex justify-center mb-10">
-        <img className="w-screen img-bleed max-sm:min-w-[700px]" src={map} alt="map"></img>
+        <div className="relative w-screen img-bleed max-sm:min-w-[500px] px-bleed" src={map} alt="map">
+          <img className="w-full h-full" src={map} alt="map"/>
+          {bookpoints
+          .sort((a, b) => a.coords && b.coords ? b.coords[0] - a.coords[0] : 1)
+          .map((bookpoint, idx) =>
+            <BookpointMarker key={idx} bookpoint={bookpoint}
+            onOpen={() => setSelected(bookpoint.name)} open={selected === bookpoint.name}/>
+          )}
+        </div>
       </div>
 
       <div className="mb-10">
@@ -37,7 +53,7 @@ const BookpointPage = () => {
         </div>
       </div>
 
-      {BOOKPOINTS.map((bookpoint, idx) => <div key={idx} className="mb-10 text-md">
+      {bookpoints.map((bookpoint, idx) => <div key={idx} className="mb-10 text-md">
         <div className="flex items-center space-x-5 text-black">
           <img className="h-5" src={arrowIcon} alt="arrow"/>
           <p>{bookpoint.name}</p>
@@ -88,3 +104,50 @@ const BookpointPage = () => {
 }
 
 export default BookpointPage;
+
+const BookpointMarker = ({bookpoint, onOpen, open}) => {
+
+  if (!bookpoint.coords || bookpoint.coords.length !== 2) return (
+    <></>
+  )
+
+  const left = (bookpoint.coords[1]-LON[0])/(LON[1]-LON[0]) * 100
+  const bottom = (bookpoint.coords[0]-LAT[0])/(LAT[1]-LAT[0]) * 100
+
+  console.log(bookpoint.name, left, bottom)
+
+  let labelLeft = 15
+  let labelBottom = 15
+
+  if (left < 30) labelLeft += 50
+  if (left > 70) labelLeft -= 50
+  if (bottom < 30) labelBottom += 0
+  if (bottom > 70) labelBottom -= 80
+
+  return (
+    <div
+      className="absolute text-center -translate-x-1/2 pb-2 pointer-events-none"
+      style={{
+        left: `${left}%`,
+        bottom: `${bottom}%`
+      }}
+    >
+      <div className={`
+        transition duration-300 pointer-events-none
+        ${open ? "opacity-100" : "opacity-0"}
+        absolute -translate-x-1/2 -translate-y-1/2
+        max-w-none w-max px-3 py-1
+        bg-white bg-opacity-60
+      `}
+      style={{
+        bottom: `${labelBottom}px`,
+        left: `${labelLeft}px`
+      }}
+      >
+        <p className="text-[12px]">{bookpoint.name}</p>
+        <p className="font-semibold text-[15px]">{bookpoint.address}</p>
+      </div>
+      <img onClick={onOpen} src={arrowIcon} className="max-sm:h-[25px] sm:h-[30px] rotate-90 mx-auto mt-1 pointer-events-auto cursor-pointer" alt="arrow"/>
+    </div>
+  )
+}

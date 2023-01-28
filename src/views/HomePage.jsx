@@ -3,13 +3,12 @@ import { Carousel } from "nuka-carousel/lib/carousel";
 import Page from "../components/Page";
 import Cta from "../components/Cta";
 
-import { EVENTS } from "../config";
-
 import leggiPrestaIncontra from "../assets/img/1_Leggi,presta,incontra.png";
 import parlanoDiNoi from "../assets/img/2_Parlanodinoi.png";
 import chiSiamo from "../assets/img/3_chisiamo.png";
 import mission from "../assets/img/4_mission.png";
 import useMediaQuery from "../hooks/useMediaQuery";
+import useGoogleSheets from "../hooks/useGoogleSheets";
 
 function renderPoints({slideCount, currentSlide, goToSlide}) {
   return <div className="flex space-x-5">
@@ -29,6 +28,7 @@ function renderPoints({slideCount, currentSlide, goToSlide}) {
 const HomePage = () => {
 
   const sm = useMediaQuery("(min-width: 740px)");
+  const { events } = useGoogleSheets()
 
   return (
     <Page bgColor>
@@ -144,7 +144,7 @@ const HomePage = () => {
           Conosciamoci dal vivo!<br/>Ecco i prossimi eventi in programma
         </div>
         <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-16">
-          {EVENTS.slice(0, sm ? 3 : 2).map((event, idx) => 
+          {events.slice(0, sm ? 3 : 2).map((event, idx) => 
             <div key={idx} className="rounded-3xl bg-salmon p-10 text-left">
               <div className="text-md mb-16">{event.date}</div>
               <div className="text-lg font-semibold">{event.title}</div>

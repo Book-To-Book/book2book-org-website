@@ -24,9 +24,13 @@ const Header = () => {
         absolute top-0 left-1/2 -translate-x-1/2 
         w-full max-w-5xl px-20 py-7
       ` : `
-        w-screen h-screen absolute z-10 bg-gradient-to-b from-pink to-orange
+        w-screen h-screen sticky top-0 left-0 z-10 bg-gradient-to-b from-pink to-orange
         pl-20 pt-12
       `}>
+        {!md && <div className="absolute top-10 right-10 z-30" onClick={() => setIsOpen(false)}>
+          <IoMdClose className="fill-white" size={50}/>
+        </div>}
+
         <img className="sm:w-40 max-sm:w-52" src={bgColor || !md ? logoColorBg : logoWhiteBg} alt="logo"></img>
         <div className={`
           flex md:justify-between
@@ -45,11 +49,8 @@ const Header = () => {
         </div>
       </div>}
 
-      {!md && <div className="absolute top-10 right-10 z-30" onClick={() => setIsOpen(isOpen => !isOpen)}>
-        {isOpen ? 
-          <IoMdClose className="fill-white" size={50}/> 
-        : <IoMdMenu className={bgColor ? "fill-white" : "fill-black"} size={50}/>
-        }
+      {!md && !isOpen && <div className="absolute top-10 right-10 z-30" onClick={() => setIsOpen(true)}>
+        <IoMdMenu className={bgColor ? "fill-white" : "fill-black"} size={50}/>
       </div>}
     </>
   )

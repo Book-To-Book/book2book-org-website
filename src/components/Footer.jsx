@@ -48,14 +48,15 @@ const Footer = () => {
           <a href="/eventi">EVENTI</a>
           <a href="/contatti">CONTATTI</a>
         </div>}
-        <form onSubmit={(e) => e.preventDefault()} className="
+        <form action="https://book2book.us11.list-manage.com/subscribe/post?u=2f54dcbd57a21fe846f9954ac&amp;id=f9c12f98f8&amp;f_id=009e9ce0f0" method="post" 
+        className="
           sm:flex-1 flex flex-col justify-between
           max-sm:w-full max-sm:space-y-3
         ">
           <label className="text-xs">ISCRIVITI ALLA NEWSLETTER</label>
-          <input name="email" placeholder="E-mail" className="text-sm py-2 px-3 bg-transparent text-black"/>
+          <input type="email" name="EMAIL" placeholder="E-mail" className="text-sm py-2 px-3 bg-transparent text-black"/>
           <div className="text-right w-full">
-            <Cta size="sm" onClick={() => console.log("Iscritto alla newsletter")}>
+            <Cta size="sm">
               ISCRIVITI
             </Cta>
           </div>

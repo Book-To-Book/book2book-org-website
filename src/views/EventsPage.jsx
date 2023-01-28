@@ -1,11 +1,13 @@
 import Cta from "../components/Cta";
 import Page from "../components/Page";
-import { EVENTS } from "../config";
+import useGoogleSheets from "../hooks/useGoogleSheets";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const EventsPage = () => {
 
   const sm = useMediaQuery("(min-width: 740px)");
+
+  const { events } = useGoogleSheets();
 
   return (
     <Page bgColor>
@@ -17,7 +19,7 @@ const EventsPage = () => {
         </div>
       </div>
       <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-40">
-        {EVENTS.map((event, idx) => <div key={idx} className="rounded-3xl bg-salmon p-10">
+        {events.map((event, idx) => <div key={idx} className="rounded-3xl bg-salmon p-10">
           <div className="text-md mb-16">{event.date}</div>
           <div className="text-lg font-semibold">{event.title}</div>
         </div>)}
