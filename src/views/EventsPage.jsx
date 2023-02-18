@@ -1,3 +1,4 @@
+import { FallingLines } from "react-loader-spinner";
 import Cta from "../components/Cta";
 import Page from "../components/Page";
 import useGoogleSheets from "../hooks/useGoogleSheets";
@@ -18,12 +19,16 @@ const EventsPage = () => {
           Ecco i prossimi eventi in programma
         </div>
       </div>
-      <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-40">
-        {events.map((event, idx) => <div key={idx} className="rounded-3xl bg-salmon p-10">
+      {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-40">
+        {events.map((event, idx) => <div key={idx} className="rounded-3xl bg-salmon p-5">
           <div className="text-md mb-16">{event.date}</div>
           <div className="text-lg font-semibold">{event.title}</div>
         </div>)}
       </div>
+      : <div className="mx-auto max-w-[100px] mb-24" >
+        <FallingLines width="100" color="#ffaf9b"/>
+      </div>
+      }
 
       <div className="
         mb-20 pt-16 pb-bleed px-bleed text-white text-base text-center mx-auto

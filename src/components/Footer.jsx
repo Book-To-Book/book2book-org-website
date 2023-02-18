@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         {sm && <div className={"flex flex-col justify-between text-xs space-y-1"}>
           <a href="/">HOME</a>
-          <a href="/info">COSA FACCIAMO</a>
+          <a href="/info">CHI SIAMO</a>
           <a href="/app">APP</a>
           <a href="/bookpoint">BOOKPOINT</a>
           <a href="/eventi">EVENTI</a>

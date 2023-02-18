@@ -1,5 +1,5 @@
 import { Carousel } from "nuka-carousel/lib/carousel";
-
+import { FallingLines } from "react-loader-spinner";
 import Page from "../components/Page";
 import Cta from "../components/Cta";
 
@@ -45,7 +45,7 @@ const HomePage = () => {
       <div className="my-20 text-white text-base max-w-xl text-center mx-auto">
         <div className="mb-10">
           Con Book2Book scambi e presti libri in tutta Torino,
-          creando la prima biblioteca di prossimità d’Italia!<br/>
+          creando la prima biblioteca di prossimità d'Italia!<br/>
           Entra anche tu nella community!
         </div>
         <Cta link="https://app.book2book.org/" alt="prova l'app">
@@ -143,14 +143,19 @@ const HomePage = () => {
         <div className="mb-10">
           Conosciamoci dal vivo!<br/>Ecco i prossimi eventi in programma
         </div>
-        <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-16">
+
+        {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-16">
           {events.slice(0, sm ? 3 : 2).map((event, idx) => 
-            <div key={idx} className="rounded-3xl bg-salmon p-10 text-left">
+            <div key={idx} className="rounded-3xl bg-salmon p-5 text-left">
               <div className="text-md mb-16">{event.date}</div>
               <div className="text-lg font-semibold">{event.title}</div>
             </div>
           )}
         </div>
+          : <div className="mx-auto max-w-[100px] mb-24" >
+          <FallingLines width="100" color="#ffaf9b"/>
+        </div>
+        }
         <Cta link="/eventi">TUTTI GLI EVENTI</Cta>
       </div>
     </Page>

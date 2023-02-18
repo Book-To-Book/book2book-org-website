@@ -5,8 +5,8 @@ const BOOKPOINTS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQO766iv
 const EVENTS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQO766ivjjGzKnN2CsA-uwIJ-q1sw3X602nsHZwXd0628GoT--drikO6IGs7JKhdh6jmpOrt_MCyyku/pub?gid=1485184774&single=true&output=csv";
 
 const useGoogleSheets = () => {
-  const [bookpoints, setBookpoints] = useState([]);
-  const [events, setEvents] = useState([]);
+  const [bookpoints, setBookpoints] = useState(undefined);
+  const [events, setEvents] = useState(undefined);
 
   useEffect(() => {
     Papa.parse(BOOKPOINTS_URL, {
@@ -17,7 +17,7 @@ const useGoogleSheets = () => {
           name: e.nome || "Nessun nome",
           address: e.indirizzo || "Nessun indirizzo",
           coords: e.latitudine && e.longitudine ?[e.latitudine, e.longitudine] : undefined
-        })))
+        })));
       },
     });
   
@@ -28,7 +28,7 @@ const useGoogleSheets = () => {
         setEvents(results.data && results.data.map(e => ({
           date: e.data || "Nessuna data",
           title: e.titolo || "Nessun titolo",
-        })))
+        })));
       },
     });
   }, [])
