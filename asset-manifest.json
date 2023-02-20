@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9d7160d.css",
-    "main.js": "/static/js/main.e744924d.js",
-    "static/media/map bookpoints.jpg": "/static/media/map bookpoints.d380ce78552c885498c2.jpg",
-    "static/media/5_BOOKPOINT_lista.png": "/static/media/5_BOOKPOINT_lista.86bdb2e16999e983294a.png",
-    "static/media/1_LIBRERIA_Aggiungiunlibro.png": "/static/media/1_LIBRERIA_Aggiungiunlibro.8f944a0edd13233269b2.png",
-    "static/media/5_Leggi,presta,incontra.png": "/static/media/5_Leggi,presta,incontra.934bee0fa6d943321fd1.png",
-    "static/media/6_SCHEDALIBRO_Guest.png": "/static/media/6_SCHEDALIBRO_Guest.1f1f8f66337ad79f7ac7.png",
-    "static/media/2_HOMEPAGE_cerca.png": "/static/media/2_HOMEPAGE_cerca.6066336ae82e1ab43408.png",
-    "static/media/1_Leggi,presta,incontra.png": "/static/media/1_Leggi,presta,incontra.5622194ef5ffc9b33984.png",
-    "static/media/2_Parlanodinoi.png": "/static/media/2_Parlanodinoi.aee67493041a478c95e6.png",
-    "static/media/4_mission.png": "/static/media/4_mission.4605542ea713db44a6a7.png",
-    "static/media/4_PROFILO.png": "/static/media/4_PROFILO.bd1e42a3dfe1887f01c4.png",
-    "static/media/7_PRESTITO_Tavola disegno 1.png": "/static/media/7_PRESTITO_Tavola disegno 1.ae895571a473dcfb6d75.png",
-    "static/media/3_CHAT_messaggi_scrivi.png": "/static/media/3_CHAT_messaggi_scrivi.847b01fff746f3e60cf1.png",
-    "static/media/3_chisiamo.png": "/static/media/3_chisiamo.6aae1ac12f76225da035.png",
-    "static/media/logo_colorBg.png": "/static/media/logo_colorBg.6043a08ffa569063cb63.png",
-    "static/media/logo_whiteBg.png": "/static/media/logo_whiteBg.fa3098f60b78060397dd.png",
-    "index.html": "/index.html"
+    "main.css": "https://book2book.org/static/css/main.e9d7160d.css",
+    "main.js": "https://book2book.org/static/js/main.76d8a0c4.js",
+    "static/media/map bookpoints.jpg": "https://book2book.org/static/media/map bookpoints.d380ce78552c885498c2.jpg",
+    "static/media/5_BOOKPOINT_lista.png": "https://book2book.org/static/media/5_BOOKPOINT_lista.86bdb2e16999e983294a.png",
+    "static/media/1_LIBRERIA_Aggiungiunlibro.png": "https://book2book.org/static/media/1_LIBRERIA_Aggiungiunlibro.8f944a0edd13233269b2.png",
+    "static/media/5_Leggi,presta,incontra.png": "https://book2book.org/static/media/5_Leggi,presta,incontra.934bee0fa6d943321fd1.png",
+    "static/media/6_SCHEDALIBRO_Guest.png": "https://book2book.org/static/media/6_SCHEDALIBRO_Guest.1f1f8f66337ad79f7ac7.png",
+    "static/media/2_HOMEPAGE_cerca.png": "https://book2book.org/static/media/2_HOMEPAGE_cerca.6066336ae82e1ab43408.png",
+    "static/media/1_Leggi,presta,incontra.png": "https://book2book.org/static/media/1_Leggi,presta,incontra.5622194ef5ffc9b33984.png",
+    "static/media/2_Parlanodinoi.png": "https://book2book.org/static/media/2_Parlanodinoi.aee67493041a478c95e6.png",
+    "static/media/4_mission.png": "https://book2book.org/static/media/4_mission.4605542ea713db44a6a7.png",
+    "static/media/4_PROFILO.png": "https://book2book.org/static/media/4_PROFILO.bd1e42a3dfe1887f01c4.png",
+    "static/media/7_PRESTITO_Tavola disegno 1.png": "https://book2book.org/static/media/7_PRESTITO_Tavola disegno 1.ae895571a473dcfb6d75.png",
+    "static/media/3_CHAT_messaggi_scrivi.png": "https://book2book.org/static/media/3_CHAT_messaggi_scrivi.847b01fff746f3e60cf1.png",
+    "static/media/3_chisiamo.png": "https://book2book.org/static/media/3_chisiamo.6aae1ac12f76225da035.png",
+    "static/media/logo_colorBg.png": "https://book2book.org/static/media/logo_colorBg.6043a08ffa569063cb63.png",
+    "static/media/logo_whiteBg.png": "https://book2book.org/static/media/logo_whiteBg.fa3098f60b78060397dd.png",
+    "index.html": "https://book2book.org/index.html"
   },
   "entrypoints": [
     "static/css/main.e9d7160d.css",
-    "static/js/main.e744924d.js"
+    "static/js/main.76d8a0c4.js"
   ]
 }
