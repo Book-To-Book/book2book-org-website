@@ -110,26 +110,40 @@ const HomePage = () => {
             renderBottomCenterControls={!sm && renderPoints}
             renderBottomLeftControls={sm && renderPoints}
           >
-            <div className="h-48 pt-5 text-white relative max-sm:text-center">
-              <p className="text-base italic mb-5">"Fanno cose, vedono gente"</p>
+            <div className="h-[300px] pt-5 text-white relative max-sm:text-center">
+              <p className="text-base italic mb-5">"Con l'applicazione B2B prende vita la prima biblioteca di prossimità d'Italia"</p>
               <p className="
                 text-md font-semibold absolute bottom-12
                 max-sm:right-1/2 max-sm:translate-x-1/2
-              ">Un tipo a caso</p>
+              ">Comune di Torino</p>
             </div>
-            <div className="h-48 pt-5 text-white relative max-sm:text-center">
-              <p className="text-base italic mb-5">"Puzzano un po' ma sono simpatici"</p>
+            <div className="h-[300px] pt-5 text-white relative max-sm:text-center">
+              <p className="text-base italic mb-5">"Book2Book si presenta come un bell'esempio di <strong>ICT4SocialGood</strong> che sfrutta il potenziale tecnologico per una mission sociale a forte vocazione locale"</p>
               <p className="
                 text-md font-semibold absolute bottom-12
                 max-sm:right-1/2 max-sm:translate-x-1/2
-              ">Luca O.</p>
+              ">Secondo Welfare</p>
             </div>
-            <div className="h-48 pt-5 text-white relative max-sm:text-center">
-              <p className="text-base italic mb-5">"Wololoooooo"</p>
+            <div className="h-[300px] pt-5 text-white relative max-sm:text-center">
+              <p className="text-base italic mb-5">"Una biblioteca “di tutti e tutte”, dove ogni cittadino può offrire libri personali o chiederli in prestito"</p>
               <p className="
                 text-md font-semibold absolute bottom-12
                 max-sm:right-1/2 max-sm:translate-x-1/2
-              ">Sant'Agostino</p>
+              ">Italia che cambia</p>
+            </div>
+            <div className="h-[300px] pt-5 text-white relative max-sm:text-center">
+              <p className="text-base italic mb-5">"Grazie all'app Book to Book creeremo una biblioteca diffusa in cui i cittadini potranno scambiare i propri libri di casa, organizzandosi per farlo fisicamente proprio in questi spazi"</p>
+              <p className="
+                text-md font-semibold absolute bottom-12
+                max-sm:right-1/2 max-sm:translate-x-1/2
+              ">Torino oggi</p>
+            </div>
+            <div className="h-[300px] pt-5 text-white relative max-sm:text-center">
+              <p className="text-base italic mb-5">"La startup torinese Book2Book tra le vincitrici della call Get it"</p>
+              <p className="
+                text-md font-semibold absolute bottom-12
+                max-sm:right-1/2 max-sm:translate-x-1/2
+              ">Torino Tech Camp</p>
             </div>
           </Carousel>
         </div>
