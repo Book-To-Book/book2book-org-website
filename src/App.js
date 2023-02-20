@@ -15,10 +15,10 @@ import InfoPage from "./views/InfoPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="w-full relative">
         <Header/>
-        <Routes basename={process.env.PUBLIC_URL}>
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/info" element={<InfoPage />} />
           <Route path="/app" element={<AppPage />} />
