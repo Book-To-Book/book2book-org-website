@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  BrowserRouter,
   Routes,
-  Route
+  Route,
+  HashRouter
 } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -15,7 +15,7 @@ import InfoPage from "./views/InfoPage";
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <div className="w-full relative">
         <Header/>
         <Routes>
@@ -28,7 +28,7 @@ const App = () => {
         </Routes>
         <Footer/>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

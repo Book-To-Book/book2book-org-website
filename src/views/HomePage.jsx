@@ -61,7 +61,7 @@ const HomePage = () => {
             il cui scopo è supportare e generare progetti di inclusione sociale,
             aventi come focus la cultura, la prossimità e il digitale.
           </div>
-          <Cta link="/info" alt="chi siamo">
+          <Cta link="/#/info" alt="chi siamo">
             SCOPRI DI PIÙ
           </Cta>
         </div>
@@ -77,7 +77,7 @@ const HomePage = () => {
             attraverso la valorizzazione del territorio e la riacquisizione
             degli spazi di aggregazione.
           </div>
-          <Cta link="/info" alt="chi siamo">
+          <Cta link="/#/info" alt="chi siamo">
             SCOPRI DI PIÙ
           </Cta>
         </div>
@@ -170,7 +170,7 @@ const HomePage = () => {
           <FallingLines width="100" color="#ffaf9b"/>
         </div>
         }
-        <Cta link="/eventi">TUTTI GLI EVENTI</Cta>
+        <Cta link="/#/eventi">TUTTI GLI EVENTI</Cta>
       </div>
     </Page>
   );
