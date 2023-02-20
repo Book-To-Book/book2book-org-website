@@ -1,7 +1,6 @@
 import Page from "../components/Page";
-// import map from "../assets/img/map.png";
+import map from "../assets/img/map bookpoints.jpg";
 import arrowIcon from "../assets/icons/arrow.png";
-// import { useState } from "react";
 import useGoogleSheets from "../hooks/useGoogleSheets";
 import { FallingLines } from "react-loader-spinner";
 
@@ -15,18 +14,17 @@ const BookpointPage = () => {
 
   return (
     <Page bgColor>
-      {/* mappa disattivata */}
-      {/* <div className="flex justify-center mb-10">
+      <div className="flex justify-center mb-10">
         <div className="relative w-screen img-bleed max-sm:min-w-[500px] px-bleed" src={map} alt="map">
           <img className="w-full h-full" src={map} alt="map"/>
-          {bookpoints && bookpoints
+          {/* {bookpoints && bookpoints
           .sort((a, b) => a.coords && b.coords ? b.coords[0] - a.coords[0] : 1)
           .map((bookpoint, idx) =>
             <BookpointMarker key={idx} bookpoint={bookpoint}
             onOpen={() => setSelected(bookpoint.name)} open={selected === bookpoint.name}/>
-          )}
+          )} */}
         </div>
-      </div> */}
+      </div>
 
       <div className="mb-10">
         <div className="text-lg text-pink mb-3">Cosa sono i BookPoint</div>
