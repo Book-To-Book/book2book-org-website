@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1b98c84.chunk.css",
-    "main.js": "/static/js/main.dfe8af99.chunk.js",
-    "main.js.map": "/static/js/main.dfe8af99.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9816799a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9816799a.js.map",
-    "static/js/2.e31a1521.chunk.js": "/static/js/2.e31a1521.chunk.js",
-    "static/js/2.e31a1521.chunk.js.map": "/static/js/2.e31a1521.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.d1b98c84.chunk.css.map": "/static/css/main.d1b98c84.chunk.css.map",
-    "static/js/2.e31a1521.chunk.js.LICENSE.txt": "/static/js/2.e31a1521.chunk.js.LICENSE.txt",
-    "static/media/Iphone_mockup_scaled.5b044ee5.png": "/static/media/Iphone_mockup_scaled.5b044ee5.png",
-    "static/media/logo_getit.2cf5fd2a.png": "/static/media/logo_getit.2cf5fd2a.png",
-    "static/media/logo_getit_negative.55102211.png": "/static/media/logo_getit_negative.55102211.png"
+    "main.css": "/static/css/main.e9d7160d.css",
+    "main.js": "/static/js/main.e744924d.js",
+    "static/media/map bookpoints.jpg": "/static/media/map bookpoints.d380ce78552c885498c2.jpg",
+    "static/media/5_BOOKPOINT_lista.png": "/static/media/5_BOOKPOINT_lista.86bdb2e16999e983294a.png",
+    "static/media/1_LIBRERIA_Aggiungiunlibro.png": "/static/media/1_LIBRERIA_Aggiungiunlibro.8f944a0edd13233269b2.png",
+    "static/media/5_Leggi,presta,incontra.png": "/static/media/5_Leggi,presta,incontra.934bee0fa6d943321fd1.png",
+    "static/media/6_SCHEDALIBRO_Guest.png": "/static/media/6_SCHEDALIBRO_Guest.1f1f8f66337ad79f7ac7.png",
+    "static/media/2_HOMEPAGE_cerca.png": "/static/media/2_HOMEPAGE_cerca.6066336ae82e1ab43408.png",
+    "static/media/1_Leggi,presta,incontra.png": "/static/media/1_Leggi,presta,incontra.5622194ef5ffc9b33984.png",
+    "static/media/2_Parlanodinoi.png": "/static/media/2_Parlanodinoi.aee67493041a478c95e6.png",
+    "static/media/4_mission.png": "/static/media/4_mission.4605542ea713db44a6a7.png",
+    "static/media/4_PROFILO.png": "/static/media/4_PROFILO.bd1e42a3dfe1887f01c4.png",
+    "static/media/7_PRESTITO_Tavola disegno 1.png": "/static/media/7_PRESTITO_Tavola disegno 1.ae895571a473dcfb6d75.png",
+    "static/media/3_CHAT_messaggi_scrivi.png": "/static/media/3_CHAT_messaggi_scrivi.847b01fff746f3e60cf1.png",
+    "static/media/3_chisiamo.png": "/static/media/3_chisiamo.6aae1ac12f76225da035.png",
+    "static/media/logo_colorBg.png": "/static/media/logo_colorBg.6043a08ffa569063cb63.png",
+    "static/media/logo_whiteBg.png": "/static/media/logo_whiteBg.fa3098f60b78060397dd.png",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/js/runtime-main.9816799a.js",
-    "static/js/2.e31a1521.chunk.js",
-    "static/css/main.d1b98c84.chunk.css",
-    "static/js/main.dfe8af99.chunk.js"
+    "static/css/main.e9d7160d.css",
+    "static/js/main.e744924d.js"
   ]
 }
