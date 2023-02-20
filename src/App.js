@@ -18,7 +18,7 @@ const App = () => {
     <BrowserRouter>
       <div className="w-full relative">
         <Header/>
-        <Routes baseName={process.env.PUBLIC_URL}>
+        <Routes basename={process.env.PUBLIC_URL}>
           <Route path="/" element={<HomePage />} />
           <Route path="/info" element={<InfoPage />} />
           <Route path="/app" element={<AppPage />} />
