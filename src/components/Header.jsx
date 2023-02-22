@@ -41,11 +41,11 @@ const Header = () => {
           ${bgColor || !md ? "text-white" : "text-black"}
         `}>
           <a href="/" className={pathname === "/" ? "font-semibold" : ""}>HOME</a>
-          <a href="/#/info" className={pathname === "/info" ? "font-semibold" : ""}>CHI SIAMO</a>
-          <a href="/#/app" className={pathname === "/app" ? "font-semibold" : ""}>APP</a>
-          <a href="/#/bookpoint" className={pathname === "/bookpoint" ? "font-semibold" : ""}>BOOKPOINT</a>
-          <a href="/#/eventi" className={pathname === "/eventi" ? "font-semibold" : ""}>EVENTI</a>
-          <a href="/#/contatti" className={pathname === "/contatti" ? "font-semibold" : ""}>CONTATTI</a>
+          <a href="/info" className={pathname === "/info" ? "font-semibold" : ""}>CHI SIAMO</a>
+          <a href="/app" className={pathname === "/app" ? "font-semibold" : ""}>APP</a>
+          <a href="/bookpoint" className={pathname === "/bookpoint" ? "font-semibold" : ""}>BOOKPOINT</a>
+          <a href="/eventi" className={pathname === "/eventi" ? "font-semibold" : ""}>EVENTI</a>
+          <a href="/contatti" className={pathname === "/contatti" ? "font-semibold" : ""}>CONTATTI</a>
         </div>
       </div>}
 

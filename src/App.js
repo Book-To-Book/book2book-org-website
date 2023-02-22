@@ -2,7 +2,7 @@ import React from "react";
 import {
   Routes,
   Route,
-  HashRouter
+  BrowserRouter
 } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -15,7 +15,7 @@ import InfoPage from "./views/InfoPage";
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="w-full relative">
         <Header/>
         <Routes>
@@ -28,7 +28,7 @@ const App = () => {
         </Routes>
         <Footer/>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

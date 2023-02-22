@@ -42,11 +42,11 @@ const Footer = () => {
         </div>
         {sm && <div className={"flex flex-col justify-between text-xs space-y-1"}>
           <a href="/">HOME</a>
-          <a href="/#/info">CHI SIAMO</a>
-          <a href="/#/app">APP</a>
-          <a href="/#/bookpoint">BOOKPOINT</a>
-          <a href="/#/eventi">EVENTI</a>
-          <a href="/#/contatti">CONTATTI</a>
+          <a href="/info">CHI SIAMO</a>
+          <a href="/app">APP</a>
+          <a href="/bookpoint">BOOKPOINT</a>
+          <a href="/eventi">EVENTI</a>
+          <a href="/contatti">CONTATTI</a>
         </div>}
         <form action="https://book2book.us11.list-manage.com/subscribe/post?u=2f54dcbd57a21fe846f9954ac&amp;id=f9c12f98f8&amp;f_id=009e9ce0f0" method="post" 
         className="
