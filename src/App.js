@@ -12,6 +12,7 @@ import ContactsPage from "./views/ContactsPage";
 import EventsPage from "./views/EventsPage";
 import HomePage from "./views/HomePage";
 import InfoPage from "./views/InfoPage";
+import PrivacyPolicyPage from "./views/PrivacyPolicyPage";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/bookpoint" element={<BookpointPage />} />
           <Route path="/eventi" element={<EventsPage />} />
           <Route path="/contatti" element={<ContactsPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         </Routes>
         <Footer/>
       </div>
