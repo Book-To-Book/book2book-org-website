@@ -6,6 +6,7 @@ import logoColorBg from "../assets/img/logo_colorBg.png";
 import iconInstagram from "../assets/icons/instagram.png";
 import iconFacebook from "../assets/icons/facebook.png";
 import iconYoutube from "../assets/icons/youtube.png";
+import logoSanPaolo from "../assets/img/compagnia_san_paolo.png"
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const Footer = () => {
@@ -16,18 +17,23 @@ const Footer = () => {
 
   return (
     <div className={`
-      absolute bottom-0 left-1/2 -translate-x-1/2 
-      w-full
+      absolute bottom-0 left-1/2 -translate-x-1/2 w-full
       ${bgColor ? "bg-opacity-0" : "bg-gradient-to-b from-pink to-orange"}
     `}>
       <div className="
-        flex sm:space-x-28 justify-between sm:items-stretch 
-        w-full max-w-5xl px-20 pt-10 pb-16 mx-auto
-        text-white text-xs
-        max-sm:flex-col max-sm:items-center max-sm:space-y-5
+        flex sm:space-x-10 md:space-x-[50px] justify-between sm:items-stretch
+        w-full max-w-5xl pt-10 pb-16 mx-auto
+        text-white text-xs px-20
+        max-sm:flex-col max-sm:items-center max-sm:space-y-10
       ">
-        <div className="flex flex-col justify-between space-y-3 w-40 max-sm:items-center">
-          <img className="w-40" src={logoColorBg} alt="logo"/>
+        <div className="flex flex-col justify-between max-sm:space-y-8 sm:space-y-3 sm:w-40 max-sm:items-center">
+          {!sm && <>
+            <div className="flex justify-between items-center space-x-10">
+              <img className="w-40" src={logoColorBg} alt="logo"/>
+              <img className="w-40" src={logoSanPaolo} alt="compagnia di san paolo"/>
+            </div>
+          </>}
+          {sm && <img className="w-40" src={logoColorBg} alt="logo"/>}
           <div className="flex space-x-3">
             <a href="https://www.instagram.com/book2book.app/">
               <img className="w-8" src={iconInstagram} alt="instagram"/>
@@ -40,6 +46,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
         {sm && <div className={"flex flex-col justify-between text-xs space-y-1"}>
           <a href="/">HOME</a>
           <a href="/info">CHI SIAMO</a>
@@ -61,6 +68,10 @@ const Footer = () => {
             </Cta>
           </div>
         </form>
+
+        {sm && <div className="my-0">
+          <img src={logoSanPaolo} className="min-w-[50px] max-w-[180px] w-full" alt="compagnia di san paolo"/>
+        </div>}
       </div>
     </div>
   )
