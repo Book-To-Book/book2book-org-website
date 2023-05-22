@@ -10,7 +10,7 @@ const DownloadApp = () => {
 
   return (
     <Page bgColor>
-      <div className="mb-20 text-center">
+      <div className="min-h-[300px] mb-20 text-center">
         <div className="text-xl text-black font-semibold mb-10">Scarica Book2Book!</div>
         <Cta link={appLink} alt="prova l'app">
           CLICCA QUI!
