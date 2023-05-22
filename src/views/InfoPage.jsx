@@ -5,9 +5,13 @@ import mission from "../assets/img/4_mission.png";
 import Cta from "../components/Cta";
 import useMediaQuery from "../hooks/useMediaQuery";
 
+import { useAppDownloadLink } from "../hooks/useAppDownloadLink";
+
 const InfoPage = () => {
 
   const sm = useMediaQuery("(min-width: 740px)");
+
+  const appLink = useAppDownloadLink();
 
   return (
     <Page bgColor>
@@ -37,7 +41,7 @@ const InfoPage = () => {
           </div>
         </div>
         {sm && <div className="max-w-half">
-          <img className="h-full img-bleed" src={chiSiamo} alt="chi siamo"/>
+          <img className="h-full img-bleed" src={chiSiamo} alt="chi siamo" />
         </div>}
       </div>
 
@@ -46,10 +50,10 @@ const InfoPage = () => {
         bg-gradient-to-b from-pink to-orange
       ">
         <div className="text-xl mb-10 font-semibold">
-          {sm ? <p>Wanna be a Book2Booker?</p> : <p>Wanna be a<br/>Book2Booker?</p>}
+          {sm ? <p>Wanna be a Book2Booker?</p> : <p>Wanna be a<br />Book2Booker?</p>}
         </div>
-        <Cta link="https://app.book2book.org/" alt="prova l'app">
-          PROVA L'APP!
+        <Cta link={appLink} alt="prova l'app">
+          SCARICA L'APP!
         </Cta>
       </div>
 

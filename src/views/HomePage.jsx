@@ -9,11 +9,12 @@ import chiSiamo from "../assets/img/3_chisiamo.png";
 import mission from "../assets/img/4_mission.png";
 import useMediaQuery from "../hooks/useMediaQuery";
 import useGoogleSheets from "../hooks/useGoogleSheets";
+import { useAppDownloadLink } from "../hooks/useAppDownloadLink";
 
-function renderPoints({slideCount, currentSlide, goToSlide}) {
+function renderPoints({ slideCount, currentSlide, goToSlide }) {
   return <div className="flex space-x-5">
     {[...Array(slideCount)].map((e, key) =>
-      <div 
+      <div
         className={`
           p-2 rounded-full bg-white cursor-pointer
           ${currentSlide !== key ? "opacity-70" : undefined}`
@@ -22,13 +23,16 @@ function renderPoints({slideCount, currentSlide, goToSlide}) {
         onClick={() => goToSlide(key)}
       />
     )}
-    </div>
+  </div>
 }
 
 const HomePage = () => {
 
   const sm = useMediaQuery("(min-width: 740px)");
+
   const { events } = useGoogleSheets()
+
+  const appLink = useAppDownloadLink();
 
   return (
     <Page bgColor>
@@ -37,7 +41,7 @@ const HomePage = () => {
         max-sm:space-y-10 max-sm:flex-col
       ">
         <div className="text-xl font-semibold text-white sm:max-w-half">
-          Leggi, presta <br/>& incontra
+          Leggi, presta <br />& incontra
         </div>
         <img className="sm:max-w-half" src={leggiPrestaIncontra} alt="Leggi, presta, incontra"></img>
       </div>
@@ -45,11 +49,11 @@ const HomePage = () => {
       <div className="my-20 text-white text-base max-w-xl text-center mx-auto">
         <div className="mb-10">
           Con Book2Book scambi e presti libri in tutta Torino,
-          creando la prima biblioteca di prossimità d'Italia!<br/>
+          creando la prima biblioteca di prossimità d'Italia!<br />
           Entra anche tu nella community!
         </div>
-        <Cta link="https://app.book2book.org/" alt="prova l'app">
-          PROVA L'APP!
+        <Cta link={appLink} alt="prova l'app">
+          SCARICA L'APP!
         </Cta>
       </div>
 
@@ -57,7 +61,7 @@ const HomePage = () => {
         <div className="text-base text-white sm:max-w-half">
           <div className="text-sm font-semibold">CHI SIAMO</div>
           <div className="mb-10">
-            Mogoa è un'Associazione di Promozione Sociale 
+            Mogoa è un'Associazione di Promozione Sociale
             il cui scopo è supportare e generare progetti di inclusione sociale,
             aventi come focus la cultura, la prossimità e il digitale.
           </div>
@@ -88,16 +92,10 @@ const HomePage = () => {
           Wanna be a Book2Booker?
         </div>
         <div className="mb-10">
-          <p className="font-semibold">La nostra app è in fase di sperimentazione,<br/>vuoi testarla in anteprima?</p>
-          <p>
-            Compila questo form lasciandoci la tua mail, le prime 100
-            persone prenderanno parte alla fase di testing.
-            Immagina un'app quasi tutta per te, come un albergo appena inaugurato.
-          </p>
           <p className="font-semibold mt-10">Presta i tuoi libri e crea la tua libreria digitale!</p>
         </div>
-        <Cta link="https://app.book2book.org/" alt="prova l'app">
-          PROVA L'APP!
+        <Cta link={appLink} alt="prova l'app">
+          SCARICA L'APP!
         </Cta>
       </div>
 
@@ -155,11 +153,11 @@ const HomePage = () => {
           I nostri eventi
         </div>
         <div className="mb-10">
-          Conosciamoci dal vivo!<br/>Ecco i prossimi eventi in programma
+          Conosciamoci dal vivo!<br />Ecco i prossimi eventi in programma
         </div>
 
         {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-16">
-          {events.slice(0, sm ? 3 : 2).map((event, idx) => 
+          {events.slice(0, sm ? 3 : 2).map((event, idx) =>
             <div key={idx} className="rounded-3xl bg-salmon p-5 text-left">
               <div className="text-md mb-16">{event.date}</div>
               <div className="text-lg font-semibold">{event.title}</div>
@@ -167,8 +165,8 @@ const HomePage = () => {
           )}
         </div>
           : <div className="mx-auto max-w-[100px] mb-24" >
-          <FallingLines width="100" color="#ffaf9b"/>
-        </div>
+            <FallingLines width="100" color="#ffaf9b" />
+          </div>
         }
         <Cta link="/eventi">TUTTI GLI EVENTI</Cta>
       </div>

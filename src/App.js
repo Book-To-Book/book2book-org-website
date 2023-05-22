@@ -13,6 +13,7 @@ import EventsPage from "./views/EventsPage";
 import HomePage from "./views/HomePage";
 import InfoPage from "./views/InfoPage";
 import PrivacyPolicyPage from "./views/PrivacyPolicyPage";
+import DownloadApp from "./views/DownloadApp";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/eventi" element={<EventsPage />} />
           <Route path="/contatti" element={<ContactsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/scarica-app" element={<DownloadApp />} />
         </Routes>
         <Footer/>
       </div>
