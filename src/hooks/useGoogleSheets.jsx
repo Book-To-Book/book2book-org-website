@@ -26,9 +26,11 @@ const useGoogleSheets = () => {
       header: true,
       complete: (results) => {
         setEvents(results.data && results.data.map(e => ({
-          date: e.data || "Nessuna data",
+          date: e.data,
+          time: e.ora,
+          place: e.luogo,
           title: e.titolo || "Nessun titolo",
-        })));
+        })).reverse());
       },
     });
   }, [])

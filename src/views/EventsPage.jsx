@@ -19,11 +19,19 @@ const EventsPage = () => {
           Ecco i prossimi eventi in programma
         </div>
       </div>
-      {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-40">
-        {events.map((event, idx) => <div key={idx} className="rounded-3xl bg-salmon p-5">
-          <div className="text-md mb-16">{event.date}</div>
-          <div className="text-lg font-semibold">{event.title}</div>
-        </div>)}
+      {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-2 mb-40">
+        {events.map((event, idx) => 
+          <div key={idx} className="rounded-3xl bg-salmon text-md p-5 flex flex-col justify-between space-y-4">
+            {(event.date || event.place) && <div>
+              {event.date && <div className="flex flex-wrap justify-between">
+                <div className="mr-4">{event.date}</div>
+                {event.time && <div className="text-black text-opacity-80">{event.time}</div>}
+              </div>}
+              {event.place && <div>{event.place}</div> }
+            </div>}
+            <div className="md:text-lg max-md:text-md font-semibold">{event.title}</div>
+          </div>
+        )}
       </div>
       : <div className="mx-auto max-w-[100px] mb-24" >
         <FallingLines width="100" color="#ffaf9b"/>
