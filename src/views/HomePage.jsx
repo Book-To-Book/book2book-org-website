@@ -156,12 +156,18 @@ const HomePage = () => {
           Conosciamoci dal vivo!<br />Ecco i prossimi eventi in programma
         </div>
 
-        {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-4 mb-16">
+        {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-2 mb-16">
           {events.slice(0, sm ? 3 : 2).map((event, idx) =>
-            <div key={idx} className="rounded-3xl bg-salmon p-5 text-left">
-              <div className="text-md mb-16">{event.date}</div>
-              <div className="text-lg font-semibold">{event.title}</div>
-            </div>
+            <div key={idx} className="text-left rounded-3xl bg-salmon text-md p-5 flex flex-col justify-between space-y-4">
+            {(event.date || event.place) && <div>
+              {event.date && <div className="flex flex-wrap justify-between">
+                <div className="mr-4">{event.date}</div>
+                {event.time && <div className="text-white text-opacity-60">{event.time}</div>}
+              </div>}
+              {event.place && <div className="text-sm">{event.place}</div> }
+            </div>}
+            <div className="md:text-lg max-md:text-md font-semibold">{event.title}</div>
+          </div>
           )}
         </div>
           : <div className="mx-auto max-w-[100px] mb-24" >

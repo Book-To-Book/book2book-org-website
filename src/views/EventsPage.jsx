@@ -27,7 +27,7 @@ const EventsPage = () => {
                 <div className="mr-4">{event.date}</div>
                 {event.time && <div className="text-black text-opacity-80">{event.time}</div>}
               </div>}
-              {event.place && <div>{event.place}</div> }
+              {event.place && <div className="text-sm">{event.place}</div> }
             </div>}
             <div className="md:text-lg max-md:text-md font-semibold">{event.title}</div>
           </div>
