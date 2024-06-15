@@ -16,7 +16,7 @@ function renderPoints({ slideCount, currentSlide, goToSlide }) {
     {[...Array(slideCount)].map((e, key) =>
       <div
         className={`
-          p-2 rounded-full bg-white cursor-pointer
+          p-2 rounded-full bg-white cursor-pointer hover:opacity-100
           ${currentSlide !== key ? "opacity-70" : undefined}`
         }
         key={key}
@@ -176,7 +176,7 @@ const HomePage = () => {
                       <>
                         {event.mapsLink ? (
                           <a
-                            className="text-sm hover:opacity-70"
+                            className="text-sm hover:opacity-80"
                             href={event.mapsLink}
                             target="_blank" rel="noreferrer"
                             onClick={(e) => e.stopPropagation()}

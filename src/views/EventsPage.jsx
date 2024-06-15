@@ -39,7 +39,7 @@ const EventsPage = () => {
                     <>
                       {event.mapsLink ? (
                         <a
-                          className="text-sm hover:opacity-70"
+                          className="text-sm hover:opacity-80"
                           href={event.mapsLink}
                           target="_blank" rel="noreferrer"
                           onClick={(e) => e.stopPropagation()}

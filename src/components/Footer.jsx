@@ -36,24 +36,24 @@ const Footer = () => {
           {sm && <img className="w-40" src={logoColorBg} alt="logo"/>}
           <div className="flex space-x-3">
             <a href="https://www.instagram.com/book2book.app/">
-              <img className="w-8" src={iconInstagram} alt="instagram"/>
+              <img className="w-8 hover:opacity-80" src={iconInstagram} alt="instagram"/>
             </a>
             <a href="https://www.facebook.com/people/Book2Bookapp/100083225077823/">
-              <img className="w-8" src={iconFacebook} alt="facebook"/>
+              <img className="w-8 hover:opacity-80" src={iconFacebook} alt="facebook"/>
             </a>
             <a href="https://www.youtube.com/@book2booktorino160">
-              <img className="w-8" src={iconYoutube} alt="youtube"/>
+              <img className="w-8 hover:opacity-80" src={iconYoutube} alt="youtube"/>
             </a>
           </div>
         </div>
 
         {sm && <div className={"flex flex-col justify-between text-xs space-y-1"}>
-          <a href="/">HOME</a>
-          <a href="/info">CHI SIAMO</a>
-          <a href="/app">APP</a>
-          <a href="/bookpoint">BOOKPOINT</a>
-          <a href="/eventi">EVENTI</a>
-          <a href="/contatti">CONTATTI</a>
+          <a href="/" className="hover:opacity-80">HOME</a>
+          <a href="/info" className="hover:opacity-80">CHI SIAMO</a>
+          <a href="/app" className="hover:opacity-80">APP</a>
+          <a href="/bookpoint" className="hover:opacity-80">BOOKPOINT</a>
+          <a href="/eventi" className="hover:opacity-80">EVENTI</a>
+          <a href="/contatti" className="hover:opacity-80">CONTATTI</a>
         </div>}
         <form action="https://book2book.us11.list-manage.com/subscribe/post?u=2f54dcbd57a21fe846f9954ac&amp;id=f9c12f98f8&amp;f_id=009e9ce0f0" method="post" 
         className="

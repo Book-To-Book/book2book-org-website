@@ -28,10 +28,12 @@ const Header = () => {
         pl-20 pt-12
       `}>
         {!md && <div className="absolute top-10 right-10 z-30" onClick={() => setIsOpen(false)}>
-          <IoMdClose className="fill-white" size={50}/>
+          <IoMdClose className="fill-white cursor-pointer hover:opacity-80" size={50}/>
         </div>}
 
-        <img className="sm:w-40 max-sm:w-52" src={bgColor || !md ? logoColorBg : logoWhiteBg} alt="logo"></img>
+        <a href="/">
+          <img className="sm:w-40 max-sm:w-52" src={bgColor || !md ? logoColorBg : logoWhiteBg} alt="logo"/>
+        </a>
         <div className={`
           flex md:justify-between
           md:flex-1 md:text-sm
@@ -40,17 +42,17 @@ const Header = () => {
           max-md:text-lg
           ${bgColor || !md ? "text-white" : "text-black"}
         `}>
-          <a href="/" className={pathname === "/" ? "font-semibold" : ""}>HOME</a>
-          <a href="/info" className={pathname === "/info" ? "font-semibold" : ""}>CHI SIAMO</a>
-          <a href="/app" className={pathname === "/app" ? "font-semibold" : ""}>APP</a>
-          <a href="/bookpoint" className={pathname === "/bookpoint" ? "font-semibold" : ""}>BOOKPOINT</a>
-          <a href="/eventi" className={pathname === "/eventi" ? "font-semibold" : ""}>EVENTI</a>
-          <a href="/contatti" className={pathname === "/contatti" ? "font-semibold" : ""}>CONTATTI</a>
+          <a href="/" className={`hover:opacity-80 ${pathname === "/" ? "font-semibold" : ""}`}>HOME</a>
+          <a href="/info" className={`hover:opacity-80 ${pathname === "/info" ? "font-semibold" : ""}`}>CHI SIAMO</a>
+          <a href="/app" className={`hover:opacity-80 ${pathname === "/app" ? "font-semibold" : ""}`}>APP</a>
+          <a href="/bookpoint" className={`hover:opacity-80 ${pathname === "/bookpoint" ? "font-semibold" : ""}`}>BOOKPOINT</a>
+          <a href="/eventi" className={`hover:opacity-80 ${pathname === "/eventi" ? "font-semibold" : ""}`}>EVENTI</a>
+          <a href="/contatti" className={`hover:opacity-80 ${pathname === "/contatti" ? "font-semibold" : ""}`}>CONTATTI</a>
         </div>
       </div>}
 
       {!md && !isOpen && <div className="absolute top-10 right-10 z-30" onClick={() => setIsOpen(true)}>
-        <IoMdMenu className={bgColor ? "fill-white" : "fill-black"} size={50}/>
+        <IoMdMenu className={`cursor-pointer hover:opacity-80 ${bgColor ? "fill-white" : "fill-black"}`} size={50}/>
       </div>}
     </>
   )
