@@ -148,7 +148,7 @@ const HomePage = () => {
         <img className="sm:max-w-half max-sm:mb-10" src={parlanoDiNoi} alt="parlano di noi"></img>
       </div>
 
-      <div className="mt-28 text-white text-base w-full text-center mx-auto">
+      <div className="mt-28 text-white text-base w-full mx-auto">
         <div className="text-xl mb-10 font-semibold">
           I nostri eventi
         </div>
@@ -156,21 +156,57 @@ const HomePage = () => {
           Conosciamoci dal vivo!<br />Ecco i prossimi eventi in programma
         </div>
 
-        {events ? <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-2 mb-16">
-          {events.slice(0, sm ? 3 : 2).map((event, idx) =>
-            <div key={idx} className="text-left rounded-3xl bg-salmon text-md p-5 flex flex-col justify-between space-y-4">
-            {(event.date || event.place) && <div>
-              {event.date && <div className="flex flex-wrap justify-between">
-                <div className="mr-4">{event.date}</div>
-                {event.time && <div className="text-white text-opacity-60">{event.time}</div>}
-              </div>}
-              {event.place && <div className="text-sm">{event.place}</div> }
-            </div>}
-            <div className="md:text-lg max-md:text-md font-semibold">{event.title}</div>
+        {events ? (
+          <div className="grid sm:grid-cols-3 max-sm:grid-cols-2 gap-2 mb-16">
+            {events.slice(0, sm ? 3 : 2).map((event, idx) => (
+              <div
+                key={idx}
+                className={`rounded-3xl bg-salmon text-md p-5 flex flex-col justify-between space-y-4 ${
+                  event.link && "cursor-pointer hover:opacity-90"
+                }`}
+                onClick={() => event.link && window.open(event.link, "_blank", "noreferrer")}
+              >
+                {(event.date || event.place) && (
+                  <div>
+                    {event.date && <div className="flex flex-wrap justify-between">
+                      <div className="mr-4">{event.date}</div>
+                      {event.time && <div className="text-white text-opacity-70">{event.time}</div>}
+                    </div>}
+                    {(event.place || event.address) && (
+                      <>
+                        {event.mapsLink ? (
+                          <a
+                            className="text-sm hover:opacity-70"
+                            href={event.mapsLink}
+                            target="_blank" rel="noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <div className="text-sm">
+                              {event.place}
+                            </div>
+                            <div className="text-xs opacity-70">
+                              {event.address}
+                            </div>
+                          </a>
+                        ) : (
+                          <>
+                            <div className="text-sm">
+                              {event.place}
+                            </div>
+                            <div className="text-xs opacity-70">
+                              {event.address}
+                            </div>
+                          </>
+                        )}
+                      </>
+                    )}
+                  </div>
+                )}
+                <div className="md:text-lg max-md:text-md font-semibold">{event.title}</div>
+              </div>
+            ))}
           </div>
-          )}
-        </div>
-          : <div className="mx-auto max-w-[100px] mb-24" >
+        ) : <div className="mx-auto max-w-[100px] mb-24" >
             <FallingLines width="100" color="#ffaf9b" />
           </div>
         }

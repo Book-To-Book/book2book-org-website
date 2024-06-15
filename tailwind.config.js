@@ -10,6 +10,7 @@ module.exports = {
       pink: '#ff1276',
       salmon: '#ffaf9b',
       orange: '#ff752d',
+      gray: '#8a8a8a',
     },
     fontSize: {
       xs: ['.9rem', '1.2rem'],
