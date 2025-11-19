@@ -47,7 +47,7 @@ const BookpointPage = () => {
       <div className="mb-16">
         <div className="text-lg text-pink mb-3">Sì, ma dove sono?</div>
         <div className="mb-10 text-md">
-          Al momento abbiamo 10 BookPoint sparsi per gran parte dei quartieri di Torino, fra
+          Al momento abbiamo {bookpoints?.length ?? ''} BookPoint sparsi per gran parte dei quartieri di Torino, fra
           cui San Salvario, Cenisia, San Donato, Barriera, Mirafiori e il Centro. Vuoi sapere
           qual è il BookPoint più vicino a te? Consulta la lista qui sotto!
         </div>
